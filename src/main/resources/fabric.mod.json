@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "piscocraft",
+  "version": "${version}",
+  "name": "PiscoCraft",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/piscocraft/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "net.facu.piscocraft.client.PiscocraftClient"
+    ],
+    "main": [
+      "net.facu.piscocraft.Piscocraft"
+    ]
+  },
+  "mixins": [
+    "piscocraft.mixins.json",
+    {
+      "config": "piscocraft.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
