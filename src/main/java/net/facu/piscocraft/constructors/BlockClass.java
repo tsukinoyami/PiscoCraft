@@ -2,8 +2,10 @@ package net.facu.piscocraft.constructors;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.facu.piscocraft.Piscocraft;
+import net.facu.piscocraft.custom.VidCropBlock;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
+import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
@@ -50,11 +52,19 @@ public class BlockClass {
         });
     }
 
+    public static final Block VID_CROP = register(
+            "vid_crop",
+            new VidCropBlock(AbstractBlock.Settings.create().noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP).pistonBehavior(PistonBehavior.DESTROY)),
+
+    );
+
     public static final Block CONDENSED_DIRT = register(
             "condensed_dirt",
             Block::new,
             AbstractBlock.Settings.create().sounds(BlockSoundGroup.GRASS),
             true
     );
+
+
 
 }
