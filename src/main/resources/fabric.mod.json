@@ -10,6 +10,9 @@
   "icon": "assets/piscocraft/icon.png",
   "environment": "*",
   "entrypoints": {
+    "fabric-datagen": [
+      "net.facu.piscocraft.datagen.PiscocraftDataGenerator"
+    ],
     "client": [
       "net.facu.piscocraft.client.PiscocraftClient"
     ],

@@ -1,0 +1,29 @@
+{
+  "criteria": {
+    "got_vid": {
+      "conditions": {
+        "items": [
+          {
+            "items": "piscocraft:vid_seeds"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
+    "description": "Primeros pasos",
+    "icon": {
+      "count": 1,
+      "id": "piscocraft:vid_seeds"
+    },
+    "title": "El mundo del copete"
+  },
+  "requirements": [
+    [
+      "got_vid"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

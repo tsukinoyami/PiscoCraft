@@ -1,6 +1,6 @@
 {
   "parent": "item/handheld",
   "textures": {
-    "layer0": "piscocraft:item/horconquemado"
+    "layer0": "piscocraft:item/120"
   }
 }
