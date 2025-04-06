@@ -12,13 +12,13 @@
     }
   },
   "display": {
-    "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
     "description": "Primeros pasos",
     "icon": {
       "count": 1,
       "id": "piscocraft:vid_seeds"
     },
-    "title": "El mundo del copete"
+    "title": "Piscocraft"
   },
   "requirements": [
     [

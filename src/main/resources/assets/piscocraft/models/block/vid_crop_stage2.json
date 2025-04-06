@@ -2,13 +2,13 @@
 	"credit": "Made with Blockbench",
 	"textures": {
 		"0": "piscocraft:block/vid_crop_stage0",
+		"1": "piscocraft:block/vid_crop_stage2",
 		"particle": "piscocraft:block/vid_crop_stage0"
 	},
 	"elements": [
 		{
 			"from": [6, -1, 6],
-			"to": [10, 1, 10],
-			"rotation": {"angle": 0, "axis": "y", "origin": [0, -1, 0]},
+			"to": [10, 10, 10],
 			"faces": {
 				"north": {"uv": [0.25, 0.25, 16, 16], "texture": "#0"},
 				"east": {"uv": [1.25, 0.25, 16, 16], "texture": "#0"},
@@ -16,6 +16,19 @@
 				"west": {"uv": [0, 0.25, 16, 16], "texture": "#0"},
 				"up": {"uv": [0.25, 0.25, 16, 16], "texture": "#0"},
 				"down": {"uv": [1.25, 0.25, 16, 16], "texture": "#missing"}
+			}
+		},
+		{
+			"from": [4, 3, 4],
+			"to": [12, 11, 12],
+			"rotation": {"angle": 0, "axis": "y", "origin": [6, 3, 6]},
+			"faces": {
+				"north": {"uv": [0, 0, 4, 4], "texture": "#1"},
+				"east": {"uv": [0, 0, 4, 4], "texture": "#1"},
+				"south": {"uv": [0, 0, 4, 4], "texture": "#1"},
+				"west": {"uv": [0, 0, 4, 4], "texture": "#1"},
+				"up": {"uv": [0, 0, 4, 4], "texture": "#1"},
+				"down": {"uv": [0, 0, 4, 4], "texture": "#1"}
 			}
 		}
 	]

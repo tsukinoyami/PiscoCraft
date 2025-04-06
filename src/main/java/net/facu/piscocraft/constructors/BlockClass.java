@@ -5,6 +5,7 @@ import net.facu.piscocraft.Piscocraft;
 import net.facu.piscocraft.custom.VidCropBlock;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
+import net.minecraft.block.CropBlock;
 import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -48,23 +49,28 @@ public class BlockClass {
 
     public static void initialize(){
         ItemGroupEvents.modifyEntriesEvent(ItemClass.PiscoCraftGroupKey).register((itemGroup) -> {
-            itemGroup.add(BlockClass.CONDENSED_DIRT.asItem());
+            itemGroup.add(BlockClass.CONDENSEDDIRT.asItem());
         });
     }
 
-    public static final Block VID_CROP = register(
+    public static final Block VIDCROP = register(
             "vid_crop",
-            new VidCropBlock(AbstractBlock.Settings.create().noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP).pistonBehavior(PistonBehavior.DESTROY)),
+            VidCropBlock::new,
+            AbstractBlock.Settings.create().nonOpaque().noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP),
+            false);
 
-    );
+    public static final Block CANNABISCROP = register(
+            "cannabis_crop",
+            VidCropBlock::new,
+            AbstractBlock.Settings.create().nonOpaque().noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP),
+            false);
 
-    public static final Block CONDENSED_DIRT = register(
+    public static final Block CONDENSEDDIRT = register(
             "condensed_dirt",
             Block::new,
             AbstractBlock.Settings.create().sounds(BlockSoundGroup.GRASS),
             true
     );
-
 
 
 }

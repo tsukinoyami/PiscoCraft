@@ -25,6 +25,7 @@ import java.util.function.Consumer;
                     FabricDataGenerator.Pack pack = generator.createPack();
 
                     pack.addProvider(AdvancementsProvider::new);
+                    pack.addProvider(BlockLootTableProvider::new);
                 }
 
                 static class AdvancementsProvider extends FabricAdvancementProvider {
