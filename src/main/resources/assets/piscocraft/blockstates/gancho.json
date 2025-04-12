@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "state=vacio": { "model": "piscocraft:block/gancho_vacio" },
+    "state=con_item": { "model": "piscocraft:block/gancho_con_item" },
+    "state=seco": { "model": "piscocraft:block/gancho_seco" }
+  }
+}

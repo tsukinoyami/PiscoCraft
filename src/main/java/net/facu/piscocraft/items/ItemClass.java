@@ -1,8 +1,9 @@
-package net.facu.piscocraft.constructors;
+package net.facu.piscocraft.items;
 
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.facu.piscocraft.Piscocraft;
+import net.facu.piscocraft.blocks.BlockClass;
 import net.minecraft.component.type.ConsumableComponent;
 import net.minecraft.component.type.ConsumableComponents;
 import net.minecraft.component.type.FoodComponent;
@@ -84,6 +85,12 @@ public class ItemClass {
     public static final Item VIDSEEDS = register("vid_seeds", settings -> new BlockItem(BlockClass.VIDCROP, settings), new Item.Settings().useItemPrefixedTranslationKey());
     public static final Item CANNABISSEEDS = register("cannabis_seeds", settings -> new BlockItem(BlockClass.CANNABISCROP, settings), new Item.Settings().useItemPrefixedTranslationKey());
     public static final Item UVA = register("uva", Item::new, new Item.Settings().food(UVA_COMPONENT));
+    public static final Item MARIHUANA = register("marihuana", Item::new, new Item.Settings());
+    public static final Item MARIHUANA_SECA = register("marihuana_seca", Item::new, new Item.Settings());
+    public static final Item MOLEDOR = register("moledor", Item::new, new Item.Settings());
+    public static final Item PITO = register("pito", Item::new, new Item.Settings());
+    public static final Item COCA_COLA = register("coca_cola", Item::new, new Item.Settings());
+
 
     public static final RegistryKey<ItemGroup> PiscoCraftGroupKey = RegistryKey.of(Registries.ITEM_GROUP.getKey(), Identifier.of(Piscocraft.MOD_ID, "item_group"));
 
@@ -118,6 +125,13 @@ public class ItemClass {
             itemGroup.add(ItemClass.VODKABLACK);
             itemGroup.add(ItemClass.VIDSEEDS);
             itemGroup.add(ItemClass.CANNABISSEEDS);
+            itemGroup.add(ItemClass.UVA);
+            itemGroup.add(ItemClass.MARIHUANA);
+            itemGroup.add(ItemClass.MARIHUANA_SECA);
+            itemGroup.add(ItemClass.MOLEDOR);
+            itemGroup.add(ItemClass.PITO);
+            itemGroup.add(ItemClass.COCA_COLA);
+
         });
     }
 

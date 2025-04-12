@@ -1,11 +1,12 @@
-package net.facu.piscocraft.constructors;
+package net.facu.piscocraft.blocks;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.facu.piscocraft.Piscocraft;
-import net.facu.piscocraft.custom.VidCropBlock;
+import net.facu.piscocraft.blocks.custom.Gancho;
+import net.facu.piscocraft.items.ItemClass;
+import net.facu.piscocraft.blocks.crops.VidCropBlock;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
-import net.minecraft.block.CropBlock;
 import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -49,7 +50,7 @@ public class BlockClass {
 
     public static void initialize(){
         ItemGroupEvents.modifyEntriesEvent(ItemClass.PiscoCraftGroupKey).register((itemGroup) -> {
-            itemGroup.add(BlockClass.CONDENSEDDIRT.asItem());
+            itemGroup.add(BlockClass.GANCHO.asItem());
         });
     }
 
@@ -65,12 +66,12 @@ public class BlockClass {
             AbstractBlock.Settings.create().nonOpaque().noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP),
             false);
 
-    public static final Block CONDENSEDDIRT = register(
-            "condensed_dirt",
-            Block::new,
-            AbstractBlock.Settings.create().sounds(BlockSoundGroup.GRASS),
+    public static final Gancho GANCHO = (Gancho) register(
+            "gancho", Gancho::new, AbstractBlock.Settings.create()
+                    .strength(0.2f, 10.0f)
+                    .sounds(BlockSoundGroup.IRON)
+                    .pistonBehavior(PistonBehavior.DESTROY)
+                    .nonOpaque(),
             true
     );
-
-
 }
